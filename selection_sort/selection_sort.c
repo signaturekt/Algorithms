@@ -7,18 +7,15 @@ int main() {
     // Init pointer array and assign random numbers in each element
     int size = 5;
     int *A = (int *)malloc(size * sizeof(int));
-    for (int i = 0; i < size; ++i)
-    {
+    for (int i = 0; i < size; ++i) {
         A[i] = rand() % 10;
     }
 
     // Print unsorted array
     printf("Unsorted Array: ");
-    for (int i = 0; i < size; ++i)
-    {
+    for (int i = 0; i < size; ++i) {
         printf("%d", A[i]);
-        if (i < size - 1)
-        {
+        if (i < size - 1) {
             printf(", ");
         }
     }
@@ -29,11 +26,9 @@ int main() {
 
     // Print sorted array
     printf("Sorted Array: ");
-    for (int i = 0; i < size; ++i)
-    {
+    for (int i = 0; i < size; ++i) {
         printf("%d", A[i]);
-        if (i < size - 1)
-        {
+        if (i < size - 1) {
             printf(", ");
         }
     }
@@ -44,15 +39,11 @@ int main() {
     return 0;
 }
 
-int *selection_sort(int *A, int n)
-{
-    for (int i = 0; i < n - 1; ++i)
-    {
+int *selection_sort(int *A, int n) {
+    for (int i = 0; i < n - 1; ++i) {
         int smallest = i;
-        for (int j = i; j < n; ++j)
-        {
-            if (A[smallest] > A[j])
-            {
+        for (int j = i; j < n; ++j) {
+            if (A[smallest] > A[j]) {
                 smallest = j;
             }
         }
