@@ -8,7 +8,6 @@ void insertion_sort(int *A, int n);
 
 int main() {
     srand(time(NULL));
-
     // Init pointer array and assign random numbers in each element
     int *A = (int *)malloc(size * sizeof(int));
     for (int i = 0; i < size; ++i) {

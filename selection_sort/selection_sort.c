@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+#define size 5
 
 int *selection_sort(int *A, int n);
 
 int main() {
+    srand(time(NULL));
     // Init pointer array and assign random numbers in each element
-    int size = 5;
     int *A = (int *)malloc(size * sizeof(int));
     for (int i = 0; i < size; ++i) {
         A[i] = rand() % 10;
